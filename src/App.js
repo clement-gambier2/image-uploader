@@ -1,7 +1,8 @@
+import FinalPage from "./pages/FinalPage";
 function App() {
   return (
     <div className="App">  
-      <p>Hello world</p>
+      <FinalPage />
     </div>
   );
 }
