@@ -1,8 +1,8 @@
 import "../style/index.css";
-function Button(){
+function Button(props) {
     
 
 
-    return <button className="button">Copy Link</button>
+    return <button className="button">{props.name}</button>
 }
 export default Button;

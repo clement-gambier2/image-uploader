@@ -14,7 +14,7 @@ function FinalPage() {
             
             <div id="url-box">
                 <p>Oui je suis une url</p>
-                <Button />
+                <Button name="Copy Link"/>
             </div>
             
         </main>
