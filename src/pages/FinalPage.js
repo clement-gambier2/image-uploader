@@ -15,12 +15,8 @@ function FinalPage() {
             <div id="url-box">
                 <p>Oui je suis une url</p>
                 <Button name="Copy Link"/>
-            </div>
-            
+            </div>    
         </main>
-        
-
-            
     );
 }
 export default FinalPage;

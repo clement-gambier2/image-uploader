@@ -26,12 +26,10 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [How to use](#how-to-use)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+- [How I realize this project ?](#how-i-realize-this-project-)
+  - [How To Use](#how-to-use)
+  - [Acknowledgements](#acknowledgements)
+  - [Contact](#contact)
 
 <!-- OVERVIEW -->
 
@@ -51,14 +49,19 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
-
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx) was to build an application to complete the given user stories.
+
+# How I realize this project ?
+- Design 
+  - FinalPage 
+  - HomePage 
+  - UploadPage 
+- Server side 
+  - Firebase
 
 ## How To Use
 
