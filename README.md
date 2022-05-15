@@ -62,6 +62,10 @@ This application/site was created as a submission to a [DevChallenges](https://d
   - UploadPage 
 - Server side 
   - Firebase
+    - send image 
+    - receive image
+    - get the URL of the image
+  - Integrate Firebase with React pages 
 
 ## How To Use
 
