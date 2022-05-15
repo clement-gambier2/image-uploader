@@ -1,0 +1,14 @@
+#loading-bar{
+    width: 340.71px;
+    height: 6px;
+    background: #2F80ED;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: 3s slidein;
+}
+  
+  
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
