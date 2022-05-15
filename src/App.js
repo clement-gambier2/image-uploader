@@ -5,17 +5,18 @@ import { useState } from "react";
 
 
 
+
+
 function App() {
   const [etatPage, setEtatPage] = useState("home");
   const [link, setLink] = useState("");
-
   
   return(
     <div className="App">  
       {/* Three states possible : home, upload, final */}
-      {etatPage === "home" && <HomePage setter={setEtatPage} link={setLink} />}
+      {etatPage === "home" && <HomePage setter={setEtatPage} link={setLink}  />}
       {etatPage === "upload" && <UploadPage />}
-      {etatPage === "final" && <FinalPage link={link} />}
+      {etatPage === "final" && <FinalPage setter={setEtatPage} link={link} />}
     </div>
   );
   

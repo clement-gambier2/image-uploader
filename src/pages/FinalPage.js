@@ -10,7 +10,7 @@ function FinalPage(props) {
                 <img src={logo} alt="done-icon" id="done-icon"></img>
                 <h1 className="title">Uploaded Successfully!</h1>
             </header>
-            <img src={test} id="final_pict" alt="viewer"></img>
+            <img src={props.link} id="final_pict" alt="viewer"></img>
             
             <div id="url-box">
                 <p>{props.link}</p>

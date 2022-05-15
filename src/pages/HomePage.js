@@ -13,9 +13,7 @@ function HomePage(props) {
     const [image, setImage] = useState(null);
     const [url, setUrl] = useState([]);
     const setState = props.setter;
-    const setLink = props.link;
-
-    
+    const setLink = props.link;    
 
     //Function to upload image to firebase storage
     const upload = () => {
@@ -33,7 +31,7 @@ function HomePage(props) {
                 
             });
         });
-        setState("upload");
+        setState("final");
         
     };
 
