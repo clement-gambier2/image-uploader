@@ -8,10 +8,14 @@ import { useState} from "react";
 import {ref,uploadBytes,getDownloadURL} from "firebase/storage";
 import { storage } from "../Firebase";
 
-function HomePage() {
+function HomePage(props) {
     //States
     const [image, setImage] = useState(null);
     const [url, setUrl] = useState([]);
+    const setState = props.setter;
+    const setLink = props.link;
+
+    
 
     //Function to upload image to firebase storage
     const upload = () => {
@@ -25,8 +29,12 @@ function HomePage() {
             //After that we can directly get the download url of the image to use it to display the image
             getDownloadURL(element.ref).then((url) => {
                 setUrl(() => [url]);
+                setLink(() => url);
+                
             });
         });
+        setState("upload");
+        
     };
 
 
@@ -47,7 +55,7 @@ function HomePage() {
                     setImage(event.target.files[0]);
                 }}/>
                 <button onClick={upload}> Upload Image</button>
-                <img src={url[0]} />
+                <img src={url[0]}/>
             </div>
         </main>
     )

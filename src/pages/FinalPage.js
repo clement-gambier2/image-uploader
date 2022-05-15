@@ -3,7 +3,7 @@ import "../style/index.css";
 import logo from "../ressources/done.png"
 import test from "../ressources/test_final.jpg";
 
-function FinalPage() {
+function FinalPage(props) {
     return (
         <main>
             <header>
@@ -13,7 +13,7 @@ function FinalPage() {
             <img src={test} id="final_pict" alt="viewer"></img>
             
             <div id="url-box">
-                <p>Oui je suis une url</p>
+                <p>{props.link}</p>
                 
             </div>    
         </main>

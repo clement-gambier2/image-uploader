@@ -1,19 +1,21 @@
 import FinalPage from "./pages/FinalPage";
 import UploadPage from "./pages/UploadPage";
 import HomePage from "./pages/HomePage";
+import { useState } from "react";
+
+
+
 function App() {
+  const [etatPage, setEtatPage] = useState("home");
+  const [link, setLink] = useState("");
+
   
-  let etat = "home"
   return(
     <div className="App">  
-    {/* Three states possible : home, upload, final */}
-    {etat === "home" && <HomePage />}
-    {etat === "upload" && <HomePage />}
-    {etat === "final" && <HomePage />}
-    
-    
-      {/* <UploadPage /> */}
-      {/* <FinalPage /> */}
+      {/* Three states possible : home, upload, final */}
+      {etatPage === "home" && <HomePage setter={setEtatPage} link={setLink} />}
+      {etatPage === "upload" && <UploadPage />}
+      {etatPage === "final" && <FinalPage link={link} />}
     </div>
   );
   
