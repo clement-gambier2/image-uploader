@@ -14,7 +14,6 @@ function FinalPage(props) {
             
             <div id="url-box">
                 <p>{props.link}</p>
-                
             </div>    
         </main>
     );

@@ -31,7 +31,7 @@ function HomePage(props) {
                 
             });
         });
-        setState("final");
+        setState("upload");
         
     };
 

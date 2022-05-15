@@ -15,7 +15,7 @@ function App() {
     <div className="App">  
       {/* Three states possible : home, upload, final */}
       {etatPage === "home" && <HomePage setter={setEtatPage} link={setLink}  />}
-      {etatPage === "upload" && <UploadPage />}
+      {etatPage === "upload" && <UploadPage setter={setEtatPage} />}
       {etatPage === "final" && <FinalPage setter={setEtatPage} link={link} />}
     </div>
   );
