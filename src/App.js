@@ -1,14 +1,15 @@
 //import FinalPage from "./pages/FinalPage";
-// import HomePage from "./pages/HomePage";
-import UploadPage from "./pages/UploadPage";
+// import UploadPage from "./pages/UploadPage";
+import HomePage from "./pages/HomePage";
 function App() {
-  return (
+  return(
     <div className="App">  
+      <HomePage />
+      {/* <UploadPage /> */}
       {/* <FinalPage /> */}
-      {/* <HomePage /> */}
-      <UploadPage />
     </div>
   );
+  
 }
 
 export default App;
