@@ -2,7 +2,7 @@ import "../style/FinalPage.css";
 import "../style/index.css";
 import logo from "../ressources/done.png"
 import test from "../ressources/test_final.jpg";
-import Button from "../components/Button";
+
 function FinalPage() {
     return (
         <main>
@@ -14,7 +14,7 @@ function FinalPage() {
             
             <div id="url-box">
                 <p>Oui je suis une url</p>
-                <Button name="Copy Link"/>
+                
             </div>    
         </main>
     );

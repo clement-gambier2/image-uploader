@@ -49,8 +49,6 @@ function HomePage() {
                 <button onClick={upload}> Upload Image</button>
                 <img src={url[0]} />
             </div>
-            
-            
         </main>
     )
 }
