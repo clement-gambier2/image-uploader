@@ -2,6 +2,10 @@
 import HomePict from "../ressources/image.svg"
 import "../style/index.css";
 import "../style/HomePage.css";
+import {useDropzone} from 'react-dropzone'
+import { useCallback } from "react";
+
+
 
 //Import what we neddd to use the function
 import { useState} from "react";
@@ -14,11 +18,19 @@ function HomePage(props) {
     const [url, setUrl] = useState([]);
     const setState = props.setter;
     const setLink = props.link;    
+    
+
+    const onDrop = useCallback((acceptedFiles) => {
+        const file = acceptedFiles[0];
+        setImage(file);
+        console.log(file);
+    }
+    , [])
+    const {getRootProps, getInputProps} = useDropzone({onDrop})
 
     //Function to upload image to firebase storage
     const upload = () => {
         if (image == null) return;
-
         //Need to specify the path to the image    
         const imageRef = ref(storage, image.name);
         //Upload the image to firebase storage
@@ -35,18 +47,24 @@ function HomePage(props) {
         
     };
 
+    
+
 
     return (
+
+    
         <main>
             <header>
                 <h1>Upload your image</h1>
                 <p>File should be Jpeg, Png,...</p>
             </header>
             
-            <div id="box">
+            <div id="box" {...getRootProps()}>
+                <input {...getInputProps()} />
                 <img src={HomePict} alt="mountain pict"/>
                 <p>Drag & Drop your image here</p>
-            </div>
+            </div> 
+            
             <div id="choose-container">
                 <p>Or</p>
                 <input className="button" type="file"onChange={(event) => {
@@ -56,6 +74,10 @@ function HomePage(props) {
                 <img src={url[0]}/>
             </div>
         </main>
+
+
+
+
     )
 }
 export default HomePage;
