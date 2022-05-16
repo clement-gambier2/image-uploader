@@ -7,7 +7,7 @@ function UploadPage(props){
     useEffect(() => {
         setTimeout(() => {
             setState("final");
-        },3000)
+        },5000)
         
     },[])
 

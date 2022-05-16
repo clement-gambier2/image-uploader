@@ -5,8 +5,8 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { useState } from "react";
 function FinalPage(props) {
 
-    const [value, setValue] = useState(props.link);
-    const [copied, setCopied] = useState(false);
+    
+    
     return (
         <main>
             <header>
@@ -20,9 +20,8 @@ function FinalPage(props) {
                 
                 <CopyToClipboard
                     options={{ debug: props.debug, message: "" }}
-                    text={value}
-                    onCopy={() => setCopied(true)}>
-                    <button>Copy to clipboard with button</button>
+                    text={props.link}>
+                    <button className="button">Copy to clipboard with button</button>
                 </CopyToClipboard>
             </div>    
         </main>

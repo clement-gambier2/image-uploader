@@ -23,13 +23,12 @@ function HomePage(props) {
     const onDrop = useCallback((acceptedFiles) => {
         const file = acceptedFiles[0];
         setImage(file);
-        console.log(file);
     }
     , [])
     const {getRootProps, getInputProps} = useDropzone({onDrop})
 
     //Function to upload image to firebase storage
-    const upload = () => {
+    function upload(){
         if (image == null) return;
         //Need to specify the path to the image    
         const imageRef = ref(storage, image.name);
@@ -67,10 +66,10 @@ function HomePage(props) {
             
             <div id="choose-container">
                 <p>Or</p>
-                <input className="button" type="file"onChange={(event) => {
+                <input className="button home-button" type="file"onChange={(event) => {
                     setImage(event.target.files[0]);
                 }}/>
-                <button onClick={upload}> Upload Image</button>
+                <button onClick={upload()} className="hide"></button>
                 <img src={url[0]}/>
             </div>
         </main>
