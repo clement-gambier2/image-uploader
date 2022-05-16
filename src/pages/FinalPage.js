@@ -1,9 +1,12 @@
 import "../style/FinalPage.css";
 import "../style/index.css";
 import logo from "../ressources/done.png"
-import test from "../ressources/test_final.jpg";
-
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { useState } from "react";
 function FinalPage(props) {
+
+    const [value, setValue] = useState(props.link);
+    const [copied, setCopied] = useState(false);
     return (
         <main>
             <header>
@@ -14,6 +17,13 @@ function FinalPage(props) {
             
             <div id="url-box">
                 <p>{props.link}</p>
+                
+                <CopyToClipboard
+                    options={{ debug: props.debug, message: "" }}
+                    text={value}
+                    onCopy={() => setCopied(true)}>
+                    <button>Copy to clipboard with button</button>
+                </CopyToClipboard>
             </div>    
         </main>
     );
